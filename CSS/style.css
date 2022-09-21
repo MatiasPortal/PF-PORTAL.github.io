@@ -6,7 +6,6 @@
 }
 
 
-
 .logo-mele {
     width: 110px;
     height: 110px;
@@ -217,7 +216,8 @@ footer {
 }
 
 .titulos-pages {
-    padding: 70px;
+    padding: 20px 0 50px 70px;
+    width: 50%;
 }
 
 .encontranos-map img {
@@ -246,23 +246,92 @@ footer {
     width: 200vh;
 }
 
-.productos .col-sm-6 a {
+.productos-cards .col-sm-6 a {
     text-decoration: none;
     color: black;
 }
 
-
-.accesorios {
-    margin-bottom: 80px;
-    padding-top: 90px;
-    padding-left: 70px;
+.productos-cards .card {
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
 }
-
-.accesorios-cards {
+.productos-cards .card:hover{
+    transition: all 0.7s;
+    opacity: 0.8;
+}
+.productos-cards {
+    width: 100%;
     padding-bottom: 60px;
 }
 
 
+.productos{
+    width: 90%;
+    padding-left: 70px;
+    padding-top: 40px;
+}
+
+.accesorios {
+    width: 50%;
+    margin-bottom: 80px;
+    padding-top: 30px;
+    padding-left: 70px;
+}
+.accesorios-cards {
+    width: 100%;
+    padding-left: 20px;
+}
+.accesorios-cards .card {
+    box-shadow:  rgba(0, 0, 0, 1) 0px 5px 15px;
+}
+
+
+.remeras-cards {
+    width: 100%;
+    padding-left: 20px;
+}
+.remeras-cards .card {
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+}
+.remeras-cards .card:hover {
+    transition: all 0.7s;
+    opacity: 0.8;
+}
+
+.pantalones-cards {
+    width: 100%;
+    padding-left: 20px;
+}
+.pantalones-cards .card{
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+}
+.pantalones-cards .card:hover {
+    transition: all 0.7s;
+    opacity: 0.8;
+}
+
+.jeans-cards {
+    width: 100%;
+    padding-left: 20px;
+}
+.jeans-cards .card {
+    box-shadow:rgba(0, 0, 0, 1) 0px 5px 15px; 
+}
+.jeans-cards .card:hover {
+    transition: all 0.7s;
+    opacity: 0.8;
+}
+
+.abrigos-cards {
+    width: 100%;
+    padding-left: 20px;
+}
+.abrigos-cards .card{
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;;
+}
+.abrigos-cards .card:hover {
+    transition: all 0.7s;
+    opacity: 0.8;
+}
 
 
 
