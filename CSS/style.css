@@ -156,6 +156,8 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+
+
 .nuevos-ingresos__cards .col .card img:hover {
     transition: all 0.6s;
     opacity: 0.6;
@@ -224,6 +226,12 @@ footer {
     padding-top: 60px;
 }
 
+.imagen-local {
+    width: 500px;
+    height: 700px;
+    margin-bottom: 30px;
+}
+
 .encontranos-map .row .col h1 {
     padding-bottom: 10px;
     padding-top: 30px;
@@ -242,7 +250,7 @@ footer {
 }
 
 .maps {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     width: 200vh;
 }
 
@@ -283,7 +291,10 @@ footer {
 .accesorios-cards .card {
     box-shadow:  rgba(0, 0, 0, 1) 0px 5px 15px;
 }
-
+.accesorios-cards .card:hover {
+    transition: all 0.6s;
+    opacity: 0.6;
+}
 
 .remeras-cards {
     width: 100%;
@@ -316,27 +327,40 @@ footer {
 .jeans-cards .card {
     box-shadow:rgba(0, 0, 0, 1) 0px 5px 15px; 
 }
+
 .jeans-cards .card:hover {
     transition: all 0.7s;
     opacity: 0.8;
 }
 
-.abrigos-cards {
+.sweaters-cards {
     width: 100%;
     padding-left: 20px;
 }
-.abrigos-cards .card{
+.sweaters-cards .card{
     box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;;
 }
-.abrigos-cards .card:hover {
+.sweaters-cards .card:hover {
     transition: all 0.7s;
     opacity: 0.8;
 }
 
 
-
 @media (max-width: 442px){
     .dato-nav{
         height: 42px;
+    }
+    .imagen-local{
+        width: 300px;
+        height: 500px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .nuevos-ingresos__cards .col .card img {
+        height: 520px;
+    }
+    .jeans-cards .col .card img {
+        height: 520px;
     }
 }
