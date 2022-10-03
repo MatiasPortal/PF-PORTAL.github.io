@@ -303,10 +303,10 @@ footer {
 }
 
 @media (max-width: 442px) {
-  .dato-nav {
-    height: 42px;
+  .box-dato-nav .dato-nav {
+    height: 44px;
   }
-  .imagen-local {
+  .encontranos-map .row .imagen-local {
     width: 300px;
     height: 500px;
   }
