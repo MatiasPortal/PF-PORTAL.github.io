@@ -1,0 +1,321 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* DATO NAV */
+.box-dato-nav .dato-nav {
+  background-color: rgb(242, 217, 217);
+  height: 27px;
+  font-size: 0.8em;
+  line-height: 1;
+  padding-top: 4px;
+  border-bottom: 1px solid rgb(91, 89, 89);
+}
+
+/* NAV */
+.navbar .container-fluid .navbar-brand img {
+  width: 110px;
+  height: 110px;
+  margin-left: 20px;
+  display: none;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
+  padding-right: 20px;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown {
+  display: inline-block;
+  position: relative;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropbtn {
+  background-color: white;
+  border: none;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown a {
+  text-decoration: none;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-content a:hover {
+  background-color: #ddd;
+  color: rgb(197, 162, 162);
+}
+.navbar .container-fluid .navbar-collapse .encontrar-producto {
+  padding-right: 20px;
+}
+.navbar .container-fluid .navbar-collapse .encontrar-producto .fa-cart-shopping {
+  padding-right: 20px;
+  padding-top: 4px;
+  font-size: 28px;
+  color: rgb(78, 78, 78);
+}
+.navbar .container-fluid .navbar-collapse .encontrar-producto .fa-instagram {
+  margin-right: 20px;
+  font-size: 35px;
+  color: rgb(244, 200, 200);
+}
+.navbar .container-fluid .navbar-collapse .encontrar-producto .fa-square-facebook {
+  padding-right: 15px;
+  font-size: 35px;
+  color: rgb(244, 200, 200);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* LOGO CENTRAL */
+.logo-central img {
+  width: 200px;
+  height: auto;
+}
+.logo-central img:hover {
+  transition: all 1s;
+  width: 230px;
+}
+.logo-central h1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* CAROUSEL */
+.carousel-home {
+  box-shadow: 0 0 10px 3px rgb(94, 94, 94);
+}
+.carousel-home .carousel-inner .carousel-item img {
+  width: 90%;
+}
+.carousel-home .carousel-inner .carousel-item .carousel-caption p {
+  margin-bottom: 4vh;
+  font-size: 2vw;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* NUEVOS INGRESOS */
+.nuevos-ingresos {
+  padding-top: 80px;
+}
+.nuevos-ingresos h2 {
+  font-size: 2rem;
+}
+.nuevos-ingresos__cards {
+  width: 100%;
+}
+.nuevos-ingresos__cards .col .card {
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.nuevos-ingresos__cards .col .card img:hover {
+  transition: all 0.7s;
+  opacity: 0.8;
+}
+.nuevos-ingresos__cards .col a {
+  text-decoration: none;
+  color: black;
+}
+
+/* BOTÓN MÁS PRODUCTOS */
+.masProductos {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 40px 0;
+}
+.masProductos button {
+  padding: 10px 50px 10px 50px;
+  background-color: rgb(35, 35, 35);
+  border: 1px solid rgb(35, 35, 35);
+  color: white;
+}
+.masProductos button:hover {
+  transition: all 1s;
+  background-color: rgb(244, 200, 200);
+  color: black;
+  border: 1px solid black;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgb(244, 200, 200);
+  box-shadow: 0px 0px 3px 2px rgb(144, 144, 144);
+}
+
+/* ENCONTRANOS */
+.encontranos-map {
+  width: 100%;
+  margin-top: 80px;
+  border: 2px solid rgb(67, 67, 67);
+  box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+}
+.encontranos-map .row .col .breadcrumb .breadcrumb-item {
+  padding-top: 30px;
+  padding-left: 30px;
+  font-size: 90%;
+}
+.encontranos-map .row .col .breadcrumb a {
+  color: black;
+}
+.encontranos-map .row .col h1 {
+  padding-bottom: 10px;
+  padding-top: 30px;
+  font-size: 25px;
+  padding-left: 20px;
+}
+.encontranos-map .row .imagen-local {
+  width: 500px;
+  height: 700px;
+  margin-bottom: 30px;
+  padding-top: 60px;
+}
+.encontranos-map .row .maps {
+  width: 200vh;
+  padding-bottom: 50px;
+}
+.encontranos-map .row .maps iframe {
+  box-shadow: 0px 0px 2px 2px;
+  width: 50vh;
+  height: 400px;
+}
+.encontranos-map .row .encontranos-map__datos {
+  font-size: 16px;
+}
+
+/* PRODUCTOS */
+/* TITULO */
+.productos {
+  width: 90%;
+  padding-left: 70px;
+  padding-top: 40px;
+}
+
+/* CARDS PRODUCTOS */
+.productos-cards {
+  width: 100%;
+  padding-bottom: 60px;
+}
+.productos-cards .col-sm-6 .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.productos-cards .col-sm-6 .card a {
+  text-decoration: none;
+  color: black;
+}
+.productos-cards .col-sm-6 .card:hover {
+  transition: all 0.7s;
+  opacity: 0.8;
+}
+
+/* ACCESORIOS */
+.accesorios {
+  width: 50%;
+  margin-bottom: 80px;
+  padding-top: 30px;
+  padding-left: 70px;
+}
+
+.accesorios-cards {
+  width: 100%;
+  padding-left: 20px;
+}
+.accesorios-cards .col .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.accesorios-cards .col .card:hover {
+  transition: all 0.7s;
+  opacity: 0.8;
+}
+
+/* REMERAS */
+.remeras-cards {
+  width: 100%;
+  padding-left: 20px;
+}
+.remeras-cards .col .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.remeras-cards .col .card:hover {
+  transition: all 0.7s;
+  opacity: 0.8;
+}
+
+/* PANTALONES */
+.pantalones-cards {
+  width: 100%;
+  padding-left: 20px;
+}
+.pantalones-cards .col .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.pantalones-cards .col .card:hover {
+  transition: all 0.7s;
+  opacity: 0.8;
+}
+
+/* JEANS */
+.jeans-cards {
+  width: 100%;
+  padding-left: 20px;
+}
+.jeans-cards .col .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.jeans-cards .col .card:hover {
+  transition: all 0.7s;
+  opacity: 0.8;
+}
+
+/* SWEATERS */
+.sweaters-cards {
+  width: 100%;
+  padding-left: 20px;
+}
+.sweaters-cards .col .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.sweaters-cards .col .card:hover {
+  transition: all 0.7s;
+  opacity: 0.8;
+}
+
+.titulos-pages {
+  padding: 20px 0 50px 70px;
+  width: 50%;
+}
+
+@media (max-width: 442px) {
+  .dato-nav {
+    height: 42px;
+  }
+  .imagen-local {
+    width: 300px;
+    height: 500px;
+  }
+}
+@media (min-width: 1300px) {
+  .nuevos-ingresos__cards .col .card img {
+    height: 520px;
+  }
+  .jeans-cards .col .card img {
+    height: 520px;
+  }
+}/*# sourceMappingURL=main.css.map */
