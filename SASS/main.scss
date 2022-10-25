@@ -2,6 +2,7 @@ $primaryColor: rgb(244, 200, 200);
 $globalFont: 'Poppins', sans-serif;
 $bgDatoNav: rgb(242, 217, 217);
 $boxShadowCard: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+$fontCarousel: 'Libre Baskerville', serif;
 
 @mixin cards {
     width: 100%;
@@ -47,6 +48,14 @@ $boxShadowCard: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             .navbar-nav {
                 .nav-item {
                     padding-right: 20px;
+                    a {
+                        font-weight: bold;
+                        color: rgb(94, 93, 93);
+                    }
+                    a:hover {
+                        transition: all 0.8s;
+                        color: rgb(181, 131, 131);
+                    }
                     .nav-link {
                         font: {
                             family: $globalFont;
@@ -54,34 +63,33 @@ $boxShadowCard: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                         }
                     }   
                 }
-                .dropdown {
-                    display: inline-block;
-                    position: relative;
-                    .dropbtn {
-                        background-color: white;
-                        border: none;
-                    }
-                    a {
-                        text-decoration: none;
-                    }
-                    .dropdown-content {
-                        display: none;
+                .productos-nav {
+                    text-decoration: none;
+                    font-family: $globalFont;
+                }
+                    .dropdown {
                         position: absolute;
-                        background-color: #f1f1f1;
-                        min-width: 160px;
-                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                        z-index: 1;
-                        a {
-                            color: black;
-                            padding: 12px 16px;
-                            text-decoration: none;
-                            display: block;
-                            &:hover {
-                                background-color: #ddd;
-                                color: rgb(197, 162, 162);
+                        display: none;
+                        width: 200px;
+                        background: rgba(178, 163, 163, 0.213);
+                        float:inherit;
+                        border-radius: 15px;
+                        ul {
+                            li {
+                                display: block;
+                                width: 100%;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                                a {
+                                    text-decoration: none;
+                                    color: black;
+                                    font-weight: 200;
+                                }
                             }
                         }
                     }
+                li:hover .dropdown{
+                    display: block;
                 }
             }
             .encontrar-producto {
@@ -95,20 +103,18 @@ $boxShadowCard: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 .fa-instagram {
                     margin-right: 20px;
                     font-size: 35px;
-                    color: rgb(244, 200, 200);
+                    color: $primaryColor;
                 }
                 .fa-square-facebook{
                     padding-right: 15px;
                     font-size: 35px;
-                    color: rgb(244, 200, 200);
+                    color: $primaryColor;
                 }
             }
         }
     }
 }
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+
 
 
 /* LOGO CENTRAL */
@@ -122,7 +128,7 @@ $boxShadowCard: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             width: 230px;
         }
     }
-    h1 {
+    &__texto {
         font: {
             size: 15px;
             weight: bold;
@@ -132,6 +138,7 @@ $boxShadowCard: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 /* CAROUSEL */
 .carousel-home {
+    margin-top: 30px;
     box-shadow: 0 0 10px 3px rgb(94, 94, 94);
     .carousel-inner {
         .carousel-item {
@@ -141,9 +148,9 @@ $boxShadowCard: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             .carousel-caption {
                 p {
                     margin-bottom: 4vh;
-                    font-size: 2vw;
+                    font-size: 2.2vw;
+                    font-weight: bold;
                     color: black;
-                    background-color: white;
                     border-radius: 10px;
                 }
             }
@@ -154,9 +161,11 @@ $boxShadowCard: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 /* NUEVOS INGRESOS */
 .nuevos-ingresos {
-    padding-top: 80px;
+    padding-top: 30px;
     h2 {
         font-size: 2rem;
+        font-weight: bold;
+        margin-top: 60px;
     }
     &__cards {
         width: 100%;
@@ -195,6 +204,30 @@ $boxShadowCard: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
     }
 }
+
+/* INFO INDEX */
+.info-index {
+    margin-top: 50px;
+    margin-bottom: 90px;
+    background-color: #e0c9c957;
+    border-radius: 30px;
+    height: 300px;
+    border: 2px solid rgb(65, 64, 64);
+    .row {
+        .col {
+            img {
+                padding-top: 80px;
+                width: 50%;
+                height: 50%;
+            }
+            p {
+                margin-top: 30px;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
 /* FOOTER */
 footer {
     background-color: $primaryColor;
@@ -203,7 +236,78 @@ footer {
 
 
 /* ENCONTRANOS */
-.encontranos-map {
+
+.encontranos-box {
+    background-image: url(../imagenes/background-encontranos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    box-shadow: $boxShadowCard;
+    section {
+        margin-top: 5em;
+        margin-bottom: 10em;
+        padding: 3em;
+
+        display: grid;
+        grid-template-areas: 
+            "breadcrumb breadcrumb"
+            "local info"
+            "local map";
+        
+        gap: 2em;
+        grid-template-columns: repeat 1fr 2fr;
+        grid-template-rows: 30px 400px 340px ;
+        img {
+            width: 30vw;
+            object-fit: cover;
+            grid-area: local;
+            margin-top: 30px;
+            box-shadow: $boxShadowCard;
+        }
+        .breadcrumb {
+            grid-area: breadcrumb;
+        }
+        .info {
+            grid-area: info;
+            background-color: #FDDBDB;
+            width: 37em;
+            height: 100%;
+            box-shadow: $boxShadowCard;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h1 {
+                font-size: 3em;
+                text-align: center;
+                letter-spacing: 0.3em;
+                padding: 15px;
+            }
+            p {
+                width: 80%;
+                margin: 20px auto;
+                letter-spacing: 4px;
+                font-size: 14px;
+            }
+            .vcp {
+                text-align: end;
+            }
+        }
+        .caja-map {
+            grid-area: map;
+            display: flex;
+            flex-direction: row-reverse;
+            padding-right: 35px;
+            .map {
+                width: 450px;
+                box-shadow: $boxShadowCard;
+            }
+        }
+    }
+}
+
+/* .encontranos-map {
     width: 100%;
     margin-top: 80px;
     border: 2px solid rgb(67, 67, 67);
@@ -246,7 +350,8 @@ footer {
             font-size: 16px;
         }
     }
-}
+} */
+
 
 
 /* PRODUCTOS */
@@ -374,3 +479,76 @@ footer {
         height: 520px;
     }
 }
+
+@media (max-width: 1494px) {
+    .encontranos-box {
+        background-image: none;
+        background-color: #E9D3D3;
+        section {
+            .info {
+                width: 400px;
+                h1 {
+                    font-size: 27px;
+                }
+            }
+            .caja-map {
+                .map {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .encontranos-box {
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 40vw;
+            }
+            .caja-map {
+                .map {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .encontranos-box {
+        section {
+            .info {
+                width: 230px;
+                h1 {
+                    font-size: 15px;
+                }
+                p {
+                    font-size: 10px;
+                }
+            }
+            .caja-map {
+                .map {
+                    width: 230px;
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .dropdown ul {
+        background: rgb(242, 199, 199);
+        border-radius: 10px;
+    }
+    .dropdown ul li a {
+        color: rgb(249, 212, 212);
+    }
+}
+
+

@@ -26,38 +26,43 @@
 .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
   padding-right: 20px;
 }
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item a {
+  font-weight: bold;
+  color: rgb(94, 93, 93);
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item a:hover {
+  transition: all 0.8s;
+  color: rgb(181, 131, 131);
+}
 .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
+.navbar .container-fluid .navbar-collapse .navbar-nav .productos-nav {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
 .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown {
-  display: inline-block;
-  position: relative;
-}
-.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropbtn {
-  background-color: white;
-  border: none;
-}
-.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown a {
-  text-decoration: none;
-}
-.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-content {
-  display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  display: none;
+  width: 200px;
+  background: rgba(178, 163, 163, 0.213);
+  float: inherit;
+  border-radius: 15px;
 }
-.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown ul li {
   display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-content a:hover {
-  background-color: #ddd;
-  color: rgb(197, 162, 162);
+.navbar .container-fluid .navbar-collapse .navbar-nav .dropdown ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 200;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav li:hover .dropdown {
+  display: block;
 }
 .navbar .container-fluid .navbar-collapse .encontrar-producto {
   padding-right: 20px;
@@ -79,10 +84,6 @@
   color: rgb(244, 200, 200);
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 /* LOGO CENTRAL */
 .logo-central img {
   width: 200px;
@@ -92,13 +93,14 @@
   transition: all 1s;
   width: 230px;
 }
-.logo-central h1 {
+.logo-central__texto {
   font-size: 15px;
   font-weight: bold;
 }
 
 /* CAROUSEL */
 .carousel-home {
+  margin-top: 30px;
   box-shadow: 0 0 10px 3px rgb(94, 94, 94);
 }
 .carousel-home .carousel-inner .carousel-item img {
@@ -106,18 +108,20 @@
 }
 .carousel-home .carousel-inner .carousel-item .carousel-caption p {
   margin-bottom: 4vh;
-  font-size: 2vw;
+  font-size: 2.2vw;
+  font-weight: bold;
   color: black;
-  background-color: white;
   border-radius: 10px;
 }
 
 /* NUEVOS INGRESOS */
 .nuevos-ingresos {
-  padding-top: 80px;
+  padding-top: 30px;
 }
 .nuevos-ingresos h2 {
   font-size: 2rem;
+  font-weight: bold;
+  margin-top: 60px;
 }
 .nuevos-ingresos__cards {
   width: 100%;
@@ -154,6 +158,25 @@
   border: 1px solid black;
 }
 
+/* INFO INDEX */
+.info-index {
+  margin-top: 50px;
+  margin-bottom: 90px;
+  background-color: rgba(224, 201, 201, 0.3411764706);
+  border-radius: 30px;
+  height: 300px;
+  border: 2px solid rgb(65, 64, 64);
+}
+.info-index .row .col img {
+  padding-top: 80px;
+  width: 50%;
+  height: 50%;
+}
+.info-index .row .col p {
+  margin-top: 30px;
+  font-weight: bolder;
+}
+
 /* FOOTER */
 footer {
   background-color: rgb(244, 200, 200);
@@ -161,45 +184,116 @@ footer {
 }
 
 /* ENCONTRANOS */
-.encontranos-map {
-  width: 100%;
-  margin-top: 80px;
-  border: 2px solid rgb(67, 67, 67);
-  box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+.encontranos-box {
+  background-image: url(../imagenes/background-encontranos.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.encontranos-map .row .col .breadcrumb .breadcrumb-item {
-  padding-top: 30px;
-  padding-left: 30px;
-  font-size: 90%;
+.encontranos-box section {
+  margin-top: 5em;
+  margin-bottom: 10em;
+  padding: 3em;
+  display: grid;
+  grid-template-areas: "breadcrumb breadcrumb" "local info" "local map";
+  gap: 2em;
+  grid-template-columns: repeat 1fr 2fr;
+  grid-template-rows: 30px 400px 340px;
 }
-.encontranos-map .row .col .breadcrumb a {
-  color: black;
+.encontranos-box section img {
+  width: 30vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  grid-area: local;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.encontranos-map .row .col h1 {
-  padding-bottom: 10px;
-  padding-top: 30px;
-  font-size: 25px;
-  padding-left: 20px;
+.encontranos-box section .breadcrumb {
+  grid-area: breadcrumb;
 }
-.encontranos-map .row .imagen-local {
-  width: 500px;
-  height: 700px;
-  margin-bottom: 30px;
-  padding-top: 60px;
+.encontranos-box section .info {
+  grid-area: info;
+  background-color: #FDDBDB;
+  width: 37em;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.encontranos-map .row .maps {
-  width: 200vh;
-  padding-bottom: 50px;
+.encontranos-box section .info h1 {
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: 0.3em;
+  padding: 15px;
 }
-.encontranos-map .row .maps iframe {
-  box-shadow: 0px 0px 2px 2px;
-  width: 50vh;
-  height: 400px;
+.encontranos-box section .info p {
+  width: 80%;
+  margin: 20px auto;
+  letter-spacing: 4px;
+  font-size: 14px;
 }
-.encontranos-map .row .encontranos-map__datos {
-  font-size: 16px;
+.encontranos-box section .info .vcp {
+  text-align: end;
+}
+.encontranos-box section .caja-map {
+  grid-area: map;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 35px;
+}
+.encontranos-box section .caja-map .map {
+  width: 450px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* .encontranos-map {
+    width: 100%;
+    margin-top: 80px;
+    border: 2px solid rgb(67, 67, 67);
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+    .row {
+        .col {
+            .breadcrumb {
+                .breadcrumb-item {
+                    padding-top: 30px;
+                    padding-left: 30px;
+                    font-size: 90%;
+                }
+                a {
+                    color: black;
+                }
+            }
+            h1 {
+                padding-bottom: 10px;
+                padding-top: 30px;
+                font-size: 25px;
+                padding-left: 20px;
+            }
+        }
+        .imagen-local {
+            width: 500px;
+            height: 700px;
+            margin-bottom: 30px;
+            padding-top: 60px;
+        }
+        .maps {
+            width: 200vh;
+            padding-bottom: 50px;
+            iframe {
+                box-shadow: 0px 0px 2px 2px;
+                width: 50vh;
+                height: 400px;
+            }
+        }
+        .encontranos-map__datos {
+            font-size: 16px;
+        }
+    }
+} */
 /* PRODUCTOS */
 /* TITULO */
 .productos {
@@ -317,5 +411,58 @@ footer {
   }
   .jeans-cards .col .card img {
     height: 520px;
+  }
+}
+@media (max-width: 1494px) {
+  .encontranos-box {
+    background-image: none;
+    background-color: #E9D3D3;
+  }
+  .encontranos-box section .info {
+    width: 400px;
+  }
+  .encontranos-box section .info h1 {
+    font-size: 27px;
+  }
+  .encontranos-box section .caja-map .map {
+    width: 300px;
+  }
+}
+@media (max-width: 1020px) {
+  .encontranos-box section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .encontranos-box section img {
+    width: 40vw;
+  }
+  .encontranos-box section .caja-map .map {
+    height: 250px;
+  }
+}
+@media (max-width: 550px) {
+  .encontranos-box section .info {
+    width: 230px;
+  }
+  .encontranos-box section .info h1 {
+    font-size: 15px;
+  }
+  .encontranos-box section .info p {
+    font-size: 10px;
+  }
+  .encontranos-box section .caja-map .map {
+    width: 230px;
+    margin-left: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .dropdown ul {
+    background: rgb(242, 199, 199);
+    border-radius: 10px;
+  }
+  .dropdown ul li a {
+    color: rgb(249, 212, 212);
   }
 }/*# sourceMappingURL=main.css.map */

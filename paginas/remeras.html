@@ -35,13 +35,14 @@
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                   </li>
-                  <li class="dropdown nav-item">
-                    <a href="./productos.html"><button class="dropbtn nav-link active">Productos</button></a>
-                    <div class="dropdown-content">
-                      <a href="./remeras.html">Remeras</a>
-                      <a href="./sweaters.html">Sweaters</a>
-                      <a href="./pantalones.html">Pantalones</a>
-                      <a href="./jeans.html">Jeans</a>
+                  <li class="nav-item"><a href="../paginas/productos.html" class="productos-nav nav-link">Productos</a>
+                    <div class="dropdown">
+                      <ul>
+                        <li><a href="../paginas/remeras.html">Remeras</a></li>
+                        <li><a href="../paginas/sweaters.html">Sweaters</a></li>
+                        <li><a href="../paginas/pantalones.html">Pantalones</a></li>
+                        <li><a href="../paginas/jeans.html">Jeans</a></li>
+                      </ul>
                     </div>
                   </li>
                   <li class="nav-item">
@@ -64,8 +65,8 @@
 
     <!-- LOGO MELE CENTRAL -->
     <header class="container-fluid text-center logo-central">
-      <a href="./index.html"><img src="../imagenes/logo.jpg" alt="MELE-LOGO"></a>
-      <p>Indumentaria Femenina.</p>
+      <a href="../index.html"><img src="../imagenes/logo.jpg" alt="MELE-LOGO"></a>
+      <p class="logo-central__texto">Indumentaria Femenina.</p>
     </header>
     
     <!-- TITULO REMERAS -->
@@ -81,13 +82,13 @@
     </div>
 
     <!-- CARDS REMERAS -->
-    <div class="row row-cols-1 row-cols-md-4 g-4 remeras-cards">
+    <div class="row row-cols-2 row-cols-md-4 g-4 remeras-cards">
       <div class="col">
         <div class="card" data-aos="flip-right">
           <img src="../imagenes/remera1.jpg" class="card-img-top" alt="remera1">
           <div class="card-body">
             <h5 class="card-title">REMERA "ROMANTIC"</h5>
-            <p class="card-text">$</p>
+            <p class="card-text">$3800</p>
           </div>
         </div>
       </div>
@@ -96,7 +97,7 @@
           <img src="../imagenes/remera2.jpg" class="card-img-top" alt="remera2">
           <div class="card-body">
             <h5 class="card-title">REMERA "LOVE"</h5>
-            <p class="card-text">$</p>
+            <p class="card-text">$3800</p>
           </div>
         </div>
       </div>
@@ -105,7 +106,7 @@
           <img src="../imagenes/remera3.jpg" class="card-img-top" alt="remera3">
           <div class="card-body">
             <h5 class="card-title">REMERA "WOW!"</h5>
-            <p class="card-text">$</p>
+            <p class="card-text">$3500</p>
           </div>
         </div>
       </div>
@@ -114,7 +115,7 @@
           <img src="../imagenes/remera4.jpg" class="card-img-top" alt="remera4">
           <div class="card-body">
             <h5 class="card-title">REMERA "L'AMOUR"</h5>
-            <p class="card-text">$</p>
+            <p class="card-text">$3500</p>
           </div>
         </div>
       </div>
@@ -123,7 +124,7 @@
           <img src="../imagenes/remera5.jpg" class="card-img-top" alt="remera5">
           <div class="card-body">
             <h5 class="card-title">REMERA "BE THE CHANGE"</h5>
-            <p class="card-text">$</p>
+            <p class="card-text">$3500</p>
           </div>
         </div>
       </div>
@@ -132,7 +133,7 @@
           <img src="../imagenes/remera6.jpg" class="card-img-top" alt="remera6">
           <div class="card-body">
             <h5 class="card-title">REMERA "STAY GOLDEN"</h5>
-            <p class="card-text">$</p>
+            <p class="card-text">$3500</p>
           </div>
         </div>
       </div>
@@ -153,26 +154,26 @@
               <i class="fas fa-gem me-3"></i>MELE
             </h6>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit a dolor consectetur amet fugiat architecto ut quisquam cum veniam cumque tempora, eius at, necessitatibus animi cupiditate! Vel aliquid adipisci corrupti?
+              Somos MELE un negocio ubicado en Villa Carlos Paz con las últimas prendas a la moda femenina.
             </p>
           </div>
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
+            <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
               REDES
             </h6>
             <p>
-              <a href="#" class="text-reset">Facebook</a>
+              <a href="https://www.facebook.com" class="text-reset">Facebook</a>
             </p>
             <p>
-              <a href="#" class="text-reset">Instagram</a>
+              <a href="https://www.instagram.com/meleindumentariafemenina/" class="text-reset">Instagram</a>
             </p>
             <p>
-              <a href="#" class="text-reset">Twitter</a>
+              <a href="https://twitter.com" class="text-reset">Twitter</a>
             </p>
           </div>       
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
+            <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">CONTACTO</h6>
             <p><i class="fas fa-home me-3"></i> CÓRDOBA - VILLA CARLOS PAZ</p>
             <p>
@@ -185,9 +186,9 @@
       </div>
     </section>
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2022 Copyright:
-    <a class="text-reset fw-bold" href="#">MELE</a>
-  </div>
+      © 2022 Copyright:
+      <a class="text-reset fw-bold" href="#">MELE</a>
+    </div>
   </footer>
 
 <!-- SCRIPT BOOTSTRAP -->
